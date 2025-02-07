@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Material Button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Material Button"
+            android:textAllCaps="false"
+            style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Material Button"
+            android:textAllCaps="false"
+            style="@style/Widget.MaterialComponents.Button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Material Button"
+            android:textAllCaps="false"
+            style="@style/Widget.MaterialComponents.Button.Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Floating Action Button"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_input_add"
+            android:contentDescription="Add"
+            app:backgroundTint="@color/colorLightPink" />
+
+        <!--  TODO : Extended FAB : Contains both an icon and text -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extended Floating Action Button"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/extended_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Item"
+            android:icon="@android:drawable/ic_input_add" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material CardView"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:strokeColor="@color/colorLightPink"
+            app:strokeWidth="2dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="true"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Material Card Example"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chip"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipExample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android"
+            app:chipIcon="@drawable/ic_favourite_red"
+            app:chipIconTint="@color/colorRed"
+            app:closeIconVisible="true"
+            app:chipBackgroundColor="@color/colorLightBlue"
+            app:checkedIconVisible="false"
+            app:chipStrokeWidth="1dp"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chip Group"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSelectedChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Chip: None"
+                android:textSize="14sp"
+                android:paddingBottom="10dp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="false">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipKotlin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kotlin" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipJava"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Java" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPython"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Python" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dart" />
+            </com.google.android.material.chip.ChipGroup>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextInput EditText"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your email"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:helperText="Use a valid email address">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AutoComplete TextView"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Item"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:background="@color/white"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material CheckBox"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/materialCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I agree to the Terms &amp; Conditions"
+            app:buttonTint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toggle Button"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Dark Mode"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/switch_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material Radio Button"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Option 1"
+                    android:checked="true"
+                    app:useMaterialThemeColors="true"/>
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Option 2"
+                    app:useMaterialThemeColors="true"
+                    android:layout_marginHorizontal="10dp"/>
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Option 3"
+                    app:useMaterialThemeColors="true"/>
+            </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material Date Picker"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPickDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Date"
+                android:paddingVertical="12sp"/>
+
+            <TextView
+                android:id="@+id/tvSelectedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Date: None"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material Time Picker"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPickTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick Time" />
+
+            <TextView
+                android:id="@+id/tvSelectedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Time:  --:--"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="10dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material Divider"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textColor="@color/colorRed"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/colorPrimary"
+            android:layout_marginTop="10dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
