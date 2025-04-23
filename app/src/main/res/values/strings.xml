@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MaterialComponent</string>
+    <string name="royal_orchid_beach_resort_spa_goa"><![CDATA[Royal Orchid Beach Resort & Spa, Goa]]></string>
+    <string name="experience_world_class_service_at_royal_orchid_beach_resort_spa_goa"><![CDATA[Experience world-class service at Royal Orchid Beach Resort & Spa, Goa]]></string>
+    <string name="drinking_dining"><![CDATA[Drinking & Dining]]></string>
+    <string name="wedding_event"><![CDATA[Wedding & Event]]></string>
 </resources>
